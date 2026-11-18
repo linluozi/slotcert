@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slotcert"
+version = "0.1.0"
+description = "Rewrite safe Python classes to __slots__, with byte-exact rollback and a memory/throughput/pickle certificate"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "linluozi"}]
+keywords = ["memory", "slots", "dataclasses", "profiling", "code-rewriting"]
+
+[project.scripts]
+slotcert = "slotcert.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["slotcert*", "ledgerdemo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

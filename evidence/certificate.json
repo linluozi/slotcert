@@ -1,0 +1,283 @@
+{
+  "tool": "slotcert",
+  "version": "0.1.0",
+  "created": "2026-11-18T20:09:43+00:00",
+  "package": "/home/ubuntu/GitHub/work/algo/slotcert/ledgerdemo",
+  "module": "ledgerdemo.models",
+  "samples": "ledgerdemo.samples:FACTORIES",
+  "n": 200000,
+  "seed": 20261119,
+  "repeats": 9,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "patched_classes": [
+    "Account",
+    "Customer",
+    "Invoice",
+    "LedgerEntry",
+    "Money",
+    "Payment",
+    "ReportRow",
+    "Transaction"
+  ],
+  "files": [
+    {
+      "path": "ledgerdemo/models.py",
+      "backup": "/tmp/slotcert-final/after/.slotcert/backup/ledgerdemo/models.py",
+      "sha256_before": "d4ccd3461c8ec5562c6cabf3782240e3ff689ae9bd51cabeeee3156825b0b056",
+      "sha256_after": "c8d161bd9497121099a1fbe0deddf5b914e34718425b8c78b4366f91ab99a24d",
+      "classes": [
+        "Money",
+        "Account",
+        "Transaction",
+        "LedgerEntry",
+        "Customer",
+        "Invoice",
+        "Payment",
+        "ReportRow"
+      ],
+      "slots": {
+        "Money": [
+          "amount",
+          "currency",
+          "__weakref__"
+        ],
+        "Account": [
+          "account_id",
+          "owner",
+          "balance",
+          "__weakref__"
+        ],
+        "Transaction": [
+          "txid",
+          "account_id",
+          "amount",
+          "memo",
+          "__weakref__"
+        ],
+        "LedgerEntry": [
+          "seq",
+          "txid",
+          "debit",
+          "credit",
+          "__weakref__"
+        ],
+        "Customer": [
+          "customer_id",
+          "name",
+          "email",
+          "__weakref__"
+        ],
+        "Invoice": [
+          "invoice_id",
+          "customer_id",
+          "total",
+          "currency",
+          "__weakref__"
+        ],
+        "Payment": [
+          "payment_id",
+          "invoice_id",
+          "amount",
+          "method",
+          "__weakref__"
+        ],
+        "ReportRow": [
+          "key",
+          "count",
+          "total",
+          "__weakref__"
+        ]
+      }
+    }
+  ],
+  "entries": [
+    {
+      "class": "Account",
+      "slots": [
+        "account_id",
+        "owner",
+        "balance",
+        "__weakref__"
+      ],
+      "bytes_before": 96.132,
+      "bytes_after": 80.121,
+      "memory_ratio": 0.8334,
+      "memory_reduction_pct": 16.66,
+      "construct_ops_before": 3630985.161,
+      "construct_ops_after": 3908468.536,
+      "construct_ratio": 1.0764,
+      "access_ops_before": 17547757.69,
+      "access_ops_after": 18314208.267,
+      "access_ratio": 1.0437,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "Customer",
+      "slots": [
+        "customer_id",
+        "name",
+        "email",
+        "__weakref__"
+      ],
+      "bytes_before": 96.132,
+      "bytes_after": 80.121,
+      "memory_ratio": 0.8334,
+      "memory_reduction_pct": 16.66,
+      "construct_ops_before": 2962851.653,
+      "construct_ops_after": 3870534.472,
+      "construct_ratio": 1.3064,
+      "access_ops_before": 18387033.328,
+      "access_ops_after": 18640266.459,
+      "access_ratio": 1.0138,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "Invoice",
+      "slots": [
+        "invoice_id",
+        "customer_id",
+        "total",
+        "currency",
+        "__weakref__"
+      ],
+      "bytes_before": 104.131,
+      "bytes_after": 88.121,
+      "memory_ratio": 0.8463,
+      "memory_reduction_pct": 15.37,
+      "construct_ops_before": 3505649.89,
+      "construct_ops_after": 3620203.136,
+      "construct_ratio": 1.0327,
+      "access_ops_before": 19538830.929,
+      "access_ops_after": 20420709.096,
+      "access_ratio": 1.0451,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "LedgerEntry",
+      "slots": [
+        "seq",
+        "txid",
+        "debit",
+        "credit",
+        "__weakref__"
+      ],
+      "bytes_before": 104.131,
+      "bytes_after": 88.121,
+      "memory_ratio": 0.8463,
+      "memory_reduction_pct": 15.37,
+      "construct_ops_before": 3462374.693,
+      "construct_ops_after": 3626122.845,
+      "construct_ratio": 1.0473,
+      "access_ops_before": 19279593.952,
+      "access_ops_after": 20475139.012,
+      "access_ratio": 1.062,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "Money",
+      "slots": [
+        "amount",
+        "currency",
+        "__weakref__"
+      ],
+      "bytes_before": 88.133,
+      "bytes_after": 72.121,
+      "memory_ratio": 0.8183,
+      "memory_reduction_pct": 18.17,
+      "construct_ops_before": 3767927.529,
+      "construct_ops_after": 4162722.272,
+      "construct_ratio": 1.1048,
+      "access_ops_before": 15153542.671,
+      "access_ops_after": 16376242.924,
+      "access_ratio": 1.0807,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "Payment",
+      "slots": [
+        "payment_id",
+        "invoice_id",
+        "amount",
+        "method",
+        "__weakref__"
+      ],
+      "bytes_before": 104.131,
+      "bytes_after": 88.121,
+      "memory_ratio": 0.8463,
+      "memory_reduction_pct": 15.37,
+      "construct_ops_before": 3526096.172,
+      "construct_ops_after": 3698743.015,
+      "construct_ratio": 1.049,
+      "access_ops_before": 19554524.638,
+      "access_ops_after": 20257609.879,
+      "access_ratio": 1.036,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "ReportRow",
+      "slots": [
+        "key",
+        "count",
+        "total",
+        "__weakref__"
+      ],
+      "bytes_before": 96.132,
+      "bytes_after": 80.121,
+      "memory_ratio": 0.8334,
+      "memory_reduction_pct": 16.66,
+      "construct_ops_before": 3644281.553,
+      "construct_ops_after": 3920484.499,
+      "construct_ratio": 1.0758,
+      "access_ops_before": 17700485.46,
+      "access_ops_after": 18890165.824,
+      "access_ratio": 1.0672,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    },
+    {
+      "class": "Transaction",
+      "slots": [
+        "txid",
+        "account_id",
+        "amount",
+        "memo",
+        "__weakref__"
+      ],
+      "bytes_before": 104.131,
+      "bytes_after": 88.121,
+      "memory_ratio": 0.8463,
+      "memory_reduction_pct": 15.37,
+      "construct_ops_before": 3500090.226,
+      "construct_ops_after": 3683458.709,
+      "construct_ratio": 1.0524,
+      "access_ops_before": 20042420.394,
+      "access_ops_after": 19304685.463,
+      "access_ratio": 0.9632,
+      "state_n": 20000,
+      "state_equal": true,
+      "pickle_roundtrip": true
+    }
+  ],
+  "gates": {
+    "memory_reduced": true,
+    "construct_not_regressed": true,
+    "access_not_regressed": true,
+    "state_identical": true,
+    "pickle_roundtrip": true
+  },
+  "passed": true
+}
